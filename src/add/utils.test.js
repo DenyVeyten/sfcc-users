@@ -1,5 +1,3 @@
-import assert from "assert";
-
 import { getFileContent, isEmail } from "./utils.js";
 
 describe("Add user module utils", () => {
@@ -9,13 +7,13 @@ describe("Add user module utils", () => {
 
         it("should return true if email is valid", () => {
             validEmails.forEach((email) => {
-                assert(isEmail(email));
+                expect(isEmail(email)).toBe(true);
             });
         });
 
         it("should return false if email is invalid", () => {
             invalidEmails.forEach((email) => {
-                assert(isEmail(email) === false);
+                expect(isEmail(email)).toBe(false);
             });
         });
     });
@@ -24,11 +22,11 @@ describe("Add user module utils", () => {
         const filePath = "awd.txt";
 
         it("should return content", () => {
-            assert(getFileContent(filePath, true));
+            expect(getFileContent(filePath, true)).toBe(true);
         });
 
         it("should return promise that resolves to content", () => {
-            assert(getFileContent(filePath));
+            expect(getFileContent(filePath)).toBe(true);
         });
     });
 });

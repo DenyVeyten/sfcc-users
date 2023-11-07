@@ -42,10 +42,11 @@ export default [
             globals: {
                 it: "readonly",
                 describe: "readonly",
-                before: "readonly",
+                beforeAll: "readonly",
                 beforeEach: "readonly",
-                after: "readonly",
+                afterAll: "readonly",
                 afterEach: "readonly",
+                expect: "readonly",
             },
         },
     },

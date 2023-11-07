@@ -6,8 +6,7 @@
  */
 
 import { writeFile, readFile } from "fs/promises";
-import { dirname, relative, sep } from "path";
-import { sep as posixSep } from "path/posix";
+import { dirname, relative, sep, posix } from "path";
 
 import Constants from "../constants.js";
 import { getQuestions } from "./getQuestions.js";
@@ -32,7 +31,7 @@ export default async ({
 }) => {
     const cwdConfigPath = toCwdFilePath(configPath);
     const dwPath = relative(dirname(cwdConfigPath), Constants.DW_PATH);
-    const dwImportPath = "./" + dwPath.split(sep).join(posixSep);
+    const dwImportPath = "./" + dwPath.split(sep).join(posix.sep);
     const existingConfig = await import(toCwdFileUrl(configPath)).catch(() => ({}));
     const dw = await readFile(Constants.DW_PATH).then(JSON.parse).catch(() => {
         console.error(`Error: ${Constants.DW_PATH} is required to use`
