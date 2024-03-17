@@ -54,5 +54,5 @@ export const toEmails = async (source) => {
     // TODO: allow reading from multiple files
     const content = await getFileContent(source[0]);
 
-    return content.toString().split("\n").filter(isEmail);
+    return content.toString().split(/\r?\n/).filter(isEmail);
 };

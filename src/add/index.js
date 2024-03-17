@@ -31,7 +31,7 @@ export default async ({
     configPath,
 }) => {
     const { default: configs } = await import(toCwdFileUrl(configPath));
-    const config = await selectConfig(prompt, configs);
+    const config = await selectConfig(prompt, configs.default ?? configs);
 
     const questions = getQuestions(config);
     const {

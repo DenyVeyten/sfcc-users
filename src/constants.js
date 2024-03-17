@@ -8,4 +8,5 @@ export default {
     },
     AM_ROLES: new Set(["bm-user", "bm-admin"]),
     DW_PATH: "./dw.json",
+    PACKAGE_JSON_PATH: "./package.json",
 };

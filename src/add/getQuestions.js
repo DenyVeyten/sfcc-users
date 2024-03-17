@@ -6,7 +6,7 @@ export default (config) => {
             type: "list",
             name: "source",
             message: "Specify filename with emails (one per line)"
-                + "or inline email (comma separated)",
+                + " or inline email (comma separated)",
             initial: "john.doe@example.com, jane.doe@example.com",
             // TODO: prompts.overrides issue - string vs array for list type in no overrides mode
             format: (values) => Array.isArray(values) ? values : values.split(","),

@@ -12,7 +12,7 @@ import setup from "./src/setup/index.js";
 import Constants from "./src/constants.js";
 
 // TODO: allow all prompts to be filled as flags to avoid interactivity
-const { config, c, _: [command, ...users] } = yargs(process.argv.slice(2));
+const { config, c, _: [command = "setup", ...users] } = yargs(process.argv.slice(2));
 const configPath = config || c || Constants.CONFIG_FILENAME;
 
 const prompt = (questions, overrides) => {

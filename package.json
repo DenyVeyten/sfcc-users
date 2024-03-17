@@ -5,10 +5,11 @@
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "sfcc-users": "./cli.js"
+    "sfcc-users": "cli.js"
   },
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js src",
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js test/integration --detectOpenHandles"
   },
   "repository": {
     "type": "git",

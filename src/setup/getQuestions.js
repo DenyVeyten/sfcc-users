@@ -1,23 +1,6 @@
+import { getHostname, hasValidHostname } from "./utils.js";
 
 const helpConfigURL = "https://github.com/SalesforceCommerceCloud/sfcc-ci#configure-an-api-key";
-
-const getHostname = (string) => {
-    const url = string.startsWith("http") ? string : `https://${string}`;
-
-    return new URL(url).hostname;
-};
-
-const validateHostname = (string) => {
-    const errorMessage = "Please, provide hostname or URL";
-
-    if (URL.canParse) return URL.canParse(string) || errorMessage;
-
-    try {
-        return !!getHostname(string);
-    } catch (error) {
-        return errorMessage;
-    }
-};
 
 export const getQuestions = (dw, configs = []) => {
     const questions = [
@@ -48,7 +31,7 @@ export const getQuestions = (dw, configs = []) => {
             name: "instance",
             message: "PIG instance hostname (any)",
             initial: dw["hostname"] || "staging-us01-nto.demandware.net",
-            validate: validateHostname,
+            validate: (input) => hasValidHostname(input) || "Please, provide hostname or URL",
             format: getHostname,
         },
         {
