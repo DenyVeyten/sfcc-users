@@ -1,7 +1,5 @@
 import { getHostname, hasValidHostname } from "./utils.js";
 
-const helpConfigURL = "https://github.com/SalesforceCommerceCloud/sfcc-ci#configure-an-api-key";
-
 export const getQuestions = (dw, configs = []) => {
     const questions = [
         {

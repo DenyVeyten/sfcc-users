@@ -1,10 +1,14 @@
 import { exec } from "child_process";
 
 export const getExistingToken = () => new Promise((resolve) => {
+    if (process.env.NODE_ENV === "test") return resolve("42");
+
     exec("sfcc-ci client:auth:token", (err, stdout) => resolve(stdout.trim()));
 });
 
 export const authExec = () => new Promise((resolve, reject) => {
+    if (process.env.NODE_ENV === "test") return resolve("42");
+
     exec("sfcc-ci client:auth", (err) => {
         if (err) return reject(err);
 

@@ -14,7 +14,7 @@ describe("Global utils", () => {
     const filePaths = ["awd.txt", "../awd.txt", "awd/awd.txt"];
 
     describe("toCwdFilePath", () => {
-        it("should return file path relative to process.cwd", async () => {
+        test("relative to process.cwd", async () => {
             filePaths.forEach((filePath) => {
                 const result = toCwdFilePath(filePath);
 
@@ -25,7 +25,7 @@ describe("Global utils", () => {
     });
 
     describe("toCwdFileUrl", () => {
-        it("should return file URL relative to process.cwd", async () => {
+        test("relative to process.cwd", async () => {
             filePaths.forEach((filePath) => {
                 const result = toCwdFileUrl(filePath);
 

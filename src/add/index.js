@@ -5,6 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/**
+ * @typedef {import('prompts')} Prompts
+ */
+
 import getQuestions from "./getQuestions.js";
 import addUsers from "./addUsers.js";
 import { toEmails } from "./utils.js";
@@ -25,6 +29,13 @@ const selectConfig = async (prompt, configs) => {
     return config;
 };
 
+/**
+ * @param {Object} params
+ * @param {Prompts} params.prompt - promter to ask CLI questions
+ * @param {string[]} params.users - predefined list of emails
+ * @param {Prompt} params.configPath - path to config file
+ * @returns {Promise}
+ */
 export default async ({
     prompt,
     users,
@@ -42,7 +53,7 @@ export default async ({
     } = await prompt(questions, { source: users.join(",") });
     const emails = await toEmails(source);
 
-    addUsers({
+    return addUsers({
         emails,
         orgName: config.orgName,
         instances,

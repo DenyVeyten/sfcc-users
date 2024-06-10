@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js src",
-    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js test/integration --detectOpenHandles"
+    "test:integration": "node --experimental-vm-modules node_modules/jest/bin/jest.js tests/integration --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "sfcc-ci": "2.x.x"
   },
   "devDependencies": {
+    "@mswjs/interceptors": "^0.30.0",
     "eslint": "^8.44.0",
     "jest": "^29.7.0"
   }

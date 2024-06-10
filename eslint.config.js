@@ -40,7 +40,7 @@ export default [
         files: ["**/*.test.js"],
         languageOptions: {
             globals: {
-                it: "readonly",
+                test: "readonly",
                 describe: "readonly",
                 beforeAll: "readonly",
                 beforeEach: "readonly",

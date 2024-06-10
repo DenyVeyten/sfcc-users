@@ -5,7 +5,7 @@ describe("Setup module utils", () => {
     const expected = "awd.awd";
 
     describe("getHostname", () => {
-        it("should return a hostname from an url", () => {
+        test("hostname from an url", () => {
             urls.forEach((url) => {
                 expect(getHostname(url)).toBe(expected);
             });
@@ -15,7 +15,7 @@ describe("Setup module utils", () => {
     describe("hasValidHostname", () => {
         const validHostnames = [
             "abcd-003.dx.commercecloud.salesforce.com",
-            "development-ap01-nto.demandware.net",
+            "development-us01-nto.demandware.net",
             "http://example.com/",
             "awd@awd.com",
             "awd:awd@awd.com",
@@ -26,13 +26,13 @@ describe("Setup module utils", () => {
             "/awd/awd",
         ];
 
-        it("should return true if hostname is valid", () => {
+        test("valid hostname", () => {
             validHostnames.forEach((hostname) => {
                 expect(hasValidHostname(hostname)).toBe(true);
             });
         });
 
-        it("should return false if hostname is invalid", () => {
+        test("invalid hostname", () => {
             invalidHostnames.forEach((hostname) => {
                 expect(hasValidHostname(hostname)).toBe(false);
             });

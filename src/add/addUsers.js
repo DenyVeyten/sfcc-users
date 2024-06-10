@@ -37,7 +37,7 @@ export default async ({
 
     if (!instanceRoles.length) return;
 
-    await Promise.allSettled(instances.map(async (instance) => {
+    return Promise.allSettled(instances.map(async (instance) => {
         return Promise.all(amUsers.map(async ({ id, mail, firstName, lastName }) => {
             const localUser = await createOrUpdateLocalUser({
                 id,

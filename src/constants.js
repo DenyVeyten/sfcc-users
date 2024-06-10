@@ -1,5 +1,5 @@
 export default {
-    CONFIG_FILENAME: "sfcc-user.config.js",
+    CONFIG_FILENAME: "sfcc-users.config.js",
     HOSTNAME_PREFIXES: new Set(["development", "staging", "production"]),
     SHORTCODE_POSTFIXES: {
         production: "prd",

@@ -46,4 +46,20 @@ const onCancel = () => {
     return false;
 };
 
+if (process.env.NODE_ENV === "test") {
+    const { RemoteHttpInterceptor } = await import("@mswjs/interceptors/RemoteHttpInterceptor");
+    const { ClientRequestInterceptor } = await import("@mswjs/interceptors/ClientRequest");
+
+    const interceptor = new RemoteHttpInterceptor({
+        // Alternatively, you can use presets.
+        interceptors: [new ClientRequestInterceptor()],
+    });
+
+    interceptor.apply();
+
+    process.on("disconnect", () => {
+        interceptor.dispose();
+    });
+}
+
 (commands[command] || fallback)();

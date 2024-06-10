@@ -1,0 +1,18 @@
+{
+    "_v": "19.5",
+    "_type": "user",
+    "_resource_state": "597asd275fd8fe8bbcf9df6c170cc2635e8db1c39475ffef884f11bebffb0052",
+    "disabled": false,
+    "email": "test.ex@awd.com",
+    "external_id": "affd454w-sdsd-sdfd-gbr3-4t35t3453443",
+    "first_name": "Test",
+    "last_name": "Ex",
+    "link": "https://staging-us01-nto.demandware.net/s/-/dw/data/v19_5/users/test.ex@awd.com",
+    "locked": false,
+    "login": "test.ex@awd.com",
+    "preferred_data_locale": "default",
+    "preferred_ui_locale": "default",
+    "roles": [
+        "Non_Admin"
+    ]
+}

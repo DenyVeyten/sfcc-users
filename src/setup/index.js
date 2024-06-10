@@ -16,7 +16,7 @@ import { toCwdFilePath, toCwdFileUrl } from "../utils.js";
 const toESModuleConfigFile = (config, dwImportPath) => `
 import { createRequire } from 'module';
 
-const DW_PATH = '${dwImportPath}'
+const DW_PATH = '${dwImportPath}';
 const require = createRequire(import.meta.url);
 const dw = require(DW_PATH);
 
@@ -77,4 +77,8 @@ export default async ({
     await writeFile(cwdConfigPath, template);
 
     console.info(`${isAddMode ? "Updated" : "Created"} ${cwdConfigPath}`);
+
+    // TODO: validate dw.json for required fields
+    // TODO: validate client_id perms and notify to use
+    // "https://github.com/SalesforceCommerceCloud/sfcc-ci#configure-an-api-key";
 };

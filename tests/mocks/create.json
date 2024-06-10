@@ -1,0 +1,43 @@
+{
+    "_v": "1",
+    "mail": "test.ex@awd.com",
+    "firstName": "Test",
+    "lastName": "Ex",
+    "displayName": "Test Ex",
+    "businessPhone": null,
+    "homePhone": null,
+    "mobilePhone": null,
+    "roles": [
+        "bm-user"
+    ],
+    "organizations": [
+        "abcd-uuid4"
+    ],
+    "primaryOrganization": "abcd-uuid4",
+    "roleTenantFilter": "ECOM_USER:abcd_dev",
+    "passwordExpirationTimestamp": null,
+    "passwordModificationTimestamp": null,
+    "createdAt": null,
+    "lastModified": "2024-06-09T10:30:30.780193219Z",
+    "lastLoginDate": null,
+    "userState": "INITIAL",
+    "activationCodeCreationTimestamp": 1717929030770,
+    "externalNames": null,
+    "sfUserId": null,
+    "verifiers": [],
+    "deleteTimestamp": null,
+    "preferredLocale": null,
+    "roleTenantFilterMap": {
+        "ECOM_USER": [
+            "abcd_dev"
+        ]
+    },
+    "linkedToSfIdentity": false,
+    "id": "affd454w-sdsd-sdfd-gbr3-4t35t3453443",
+    "links": [
+        {
+            "rel": "self",
+            "href": "https://account.demandware.com/dw/rest/v1/users/affd454w-sdsd-sdfd-gbr3-4t35t3453443"
+        }
+    ]
+}

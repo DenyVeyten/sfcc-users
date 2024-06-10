@@ -130,6 +130,6 @@ dist
 .pnp.*
 
 # Project ignores
-sfcc-user.config.js
-dw.json
-users.txt
+/sfcc-users.config.js
+/dw.json
+/users.txt
