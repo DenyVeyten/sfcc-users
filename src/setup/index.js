@@ -42,7 +42,7 @@ export default async ({
     const dwImportPath = "./" + dwPath.split(sep).join(posix.sep);
     const existingConfig = await import(toCwdFileUrl(configPath)).catch(() => ({}));
     const dw = await readFile(Constants.DW_PATH).then(JSON.parse).catch(() => {
-        console.error(`Error: ${Constants.DW_PATH} is required to use`
+        console.error(`Error: ${Constants.DW_PATH} is required to use `
             + "username/password and client-id/client-secret from it");
         process.exit(1);
     });

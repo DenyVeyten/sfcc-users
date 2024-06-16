@@ -30,7 +30,7 @@ npx sfcc-users setup
 
 You will be asked for several questions to generate configuration file for future use. You may want to commit the configuration file to let your teammates skip the `setup` step.
 
-// TODO: add GIF with terminal recording with example of `setup` command
+<img src="demo/setup-demo.svg?raw=true"/>
 
 You can create/modify generated configuration file manually if you need. Format is described in [Configuration file](#configuration-file) section below.
 
@@ -46,13 +46,13 @@ npx sfcc-users add
 
 The program will ask you to enter one or several emails (comma-separated).
 
-// TODO: add GIF with terminal recording with example of `add` command
+<img src="demo/add-demo.svg?raw=true"/>
 
 ## Provide a file with emails
 
 You can provide a file with emails (one per line):
 
-// TODO: add GIF with terminal recording with example of `add` command
+<img src="demo/add-file-demo.svg?raw=true"/>
 
 ## Provide initial arguments
 
@@ -70,7 +70,7 @@ npx sfcc-users add users.txt
 
 Configuration file is JavaScript file that is used by `sfcc-users` to identify where and how users should be managed.
 
-Format:
+Format (CommonJS config will be generated instead if you don't use `"type": "module"`):
 
 ```
 import { createRequire } from 'module';
