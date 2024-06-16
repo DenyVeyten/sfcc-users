@@ -2,9 +2,9 @@
 
 Simple tool to quickly manage SFCC users in Account Manager and SFCC instances.
 
-Do you need to provide access to SFCC instances frequently, but don't want to spend much time on AM authentication and clicking through it's UI? Do you have non-default SFCC roles that you need to assign to users, but have to wait for their first login to the SFCC instance?
+Do you need to provide access to SFCC instances frequently, but don't want to spend much time on AM authentication and clicking through its UI? Do you have non-default SFCC roles that you need to assign to users, but have to wait for their first login to the SFCC instance?
 
-`sfcc-users` will do it for you in several seconds, just give it emails of users you need to provide access to.
+`sfcc-users` will do this manual work for you in several seconds, just give it emails of users you need to provide access to.
 
 # Features
 
@@ -15,9 +15,9 @@ Do you need to provide access to SFCC instances frequently, but don't want to sp
 
 # Installation
 
-## Prerequesite
+## Prerequesites
 
-This tool uses `sfcc-ci` and it's [configuration](https://github.com/SalesforceCommerceCloud/sfcc-ci#how-do-i-get-set-up) to interact with SFCC instances (to manage users there).
+This tool uses `sfcc-ci` and its [configuration](https://github.com/SalesforceCommerceCloud/sfcc-ci#how-do-i-get-set-up) to interact with SFCC instances (to manage users there).
 
 It looks for valid `dw.json` config with fields needed for `sfcc-ci` - "client-id", "client-secret", "username", "password". Format is described in [sfcc-ci guide](https://github.com/SalesforceCommerceCloud/sfcc-ci#configuration)
 
@@ -28,7 +28,7 @@ For the very first run, you need to generate configuration file. Run from the ro
 npx sfcc-users setup
 ```
 
-You will be asked for several questions to generate configuration file for future use. You may want to commit the configuration file to let your teammates skip the `setup` step.
+You will be asked a few questions to generate configuration file for future use. You may want to commit the configuration file to let your teammates to skip the `setup` step.
 
 <img src="demo/setup-demo.svg?raw=true"/>
 
@@ -44,7 +44,7 @@ You can provide emails by simply running the `add` command:
 npx sfcc-users add
 ```
 
-The program will ask you to enter one or several emails (comma-separated).
+The tool will ask you to enter one or several emails (comma-separated).
 
 <img src="demo/add-demo.svg?raw=true"/>
 
@@ -59,7 +59,7 @@ You can provide a file with emails (one per line):
 You can also specify list of emails or a file as an argument of `add` command to skip the first prompt:
 
 ```
-npx sfcc-users add test.user@example.com
+npx sfcc-users add test.user@example.com another.user@example.com
 
 # or
 

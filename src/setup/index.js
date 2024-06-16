@@ -8,6 +8,7 @@
 import { writeFile, readFile } from "fs/promises";
 import { dirname, relative, sep, posix } from "path";
 
+import prompt from "../prompter.js";
 import Constants from "../constants.js";
 import { getQuestions } from "./getQuestions.js";
 import { getInstanceType, getInstances, toInstancesConfig } from "./utils.js";
@@ -33,10 +34,7 @@ module.exports.configs = ${JSON.stringify(config, null, 4)};
 module.exports.default = module.exports.configs.map((config) => ({ ...dw, ...config }));
 `;
 
-export default async ({
-    configPath,
-    prompt,
-}) => {
+export default async ({ configPath }) => {
     const cwdConfigPath = toCwdFilePath(configPath);
     const dwPath = relative(dirname(cwdConfigPath), Constants.DW_PATH);
     const dwImportPath = "./" + dwPath.split(sep).join(posix.sep);

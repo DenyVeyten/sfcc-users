@@ -9,12 +9,13 @@
  * @typedef {import('prompts')} Prompts
  */
 
+import prompt from "../prompter.js";
 import getQuestions from "./getQuestions.js";
 import addUsers from "./addUsers.js";
 import { toEmails } from "./utils.js";
 import { toCwdFileUrl } from "../utils.js";
 
-const selectConfig = async (prompt, configs) => {
+const selectConfig = async (configs) => {
     if (configs.length < 2) return configs[0];
 
     const { config } = await prompt({
@@ -37,12 +38,11 @@ const selectConfig = async (prompt, configs) => {
  * @returns {Promise}
  */
 export default async ({
-    prompt,
     users,
     configPath,
 }) => {
     const { default: configs } = await import(toCwdFileUrl(configPath));
-    const config = await selectConfig(prompt, configs.default ?? configs);
+    const config = await selectConfig(configs.default ?? configs);
 
     const questions = getQuestions(config);
     const {
