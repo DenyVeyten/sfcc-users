@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0]
+
 ### Added
 
 - Ability to run integration tests
@@ -26,6 +28,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Replaced test setup to use Jest to support Node 14 testing
 
-[unreleased]: https://github.com/DenyVeyten/sfcc-users/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/DenyVeyten/sfcc-users/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/DenyVeyten/sfcc-users/compare/v1.0.0...v0.1.0
 [0.1.0]: https://github.com/DenyVeyten/sfcc-users/releases/tag/v0.1.0
